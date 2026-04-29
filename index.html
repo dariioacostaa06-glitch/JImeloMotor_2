@@ -49,7 +49,7 @@
 
         /* Estilos del Hero Background */
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 1)), url('jimelo.jpg');
+            background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 1)), url('jimelo.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 
         @media (max-width: 768px) {
             .hero-bg {
-                background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('header-movil.jpg');
+                background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 1)), url('header-movil.png');
             }
         }
     </style>
@@ -103,14 +103,30 @@
                 Concesionario de vehículos seleccionados y taller de mecánica avanzada. Transparencia, potencia y
                 fiabilidad en cada kilómetro.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+                <!-- Botón Nuestros Servicios -->
                 <a href="#servicios"
-                    class="border-2 border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-black transition-all uppercase tracking-widest text-sm">
-                    Ver Servicios
+                    class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-black uppercase tracking-widest text-sm bg-primary rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,193,7,0.4)]">
+                    <span class="relative z-10 flex items-center gap-2">
+                        <i class="fas fa-tools"></i> Nuestros Servicios
+                    </span>
+                    <div class="absolute inset-0 h-full w-full bg-white/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
                 </a>
-                <a href="#vehiculos"
-                    class="bg-card border-2 border-transparent px-8 py-4 rounded-full font-bold hover:border-gray-500 transition-all uppercase tracking-widest text-sm">
-                    Stock de Vehículos
+
+                <!-- Botón Nosotros -->
+                <a href="#nosotros"
+                    class="group inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-widest text-sm bg-dark/60 backdrop-blur-md border border-primary/40 rounded-full transition-all hover:bg-primary/20 hover:border-primary hover:shadow-[0_0_15px_rgba(255,193,7,0.2)] hover:-translate-y-1">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-users"></i> Nosotros
+                    </span>
+                </a>
+
+                <!-- Botón Contáctanos -->
+                <a href="#contacto"
+                    class="group inline-flex items-center justify-center px-8 py-4 font-bold text-gray-200 uppercase tracking-widest text-sm bg-white/5 backdrop-blur-lg border border-white/10 rounded-full transition-all hover:bg-white/15 hover:border-white/30 hover:text-white hover:-translate-y-1">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </span>
                 </a>
             </div>
         </div>
