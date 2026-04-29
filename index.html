@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 
 
 <head>
@@ -376,6 +376,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Animación de entrada
             const elements = document.querySelectorAll('.fade-in-up');
 
             const observer = new IntersectionObserver((entries) => {
@@ -389,6 +390,48 @@
             });
 
             elements.forEach(el => observer.observe(el));
+
+            // Smooth Scroll Personalizado (más lento y premium)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        
+                        const navHeight = 80; // Altura del navbar fijo
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 1200; // 1.2 segundos para máxima suavidad
+                        let start = null;
+
+                        // Función de easing (easeInOutCubic)
+                        function easeInOutCubic(t, b, c, d) {
+                            t /= d / 2;
+                            if (t < 1) return c / 2 * t * t * t + b;
+                            t -= 2;
+                            return c / 2 * (t * t * t + 2) + b;
+                        }
+
+                        function animation(currentTime) {
+                            if (start === null) start = currentTime;
+                            const timeElapsed = currentTime - start;
+                            const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
+                            window.scrollTo(0, run);
+                            if (timeElapsed < duration) {
+                                requestAnimationFrame(animation);
+                            } else {
+                                window.scrollTo(0, targetPosition);
+                            }
+                        }
+
+                        requestAnimationFrame(animation);
+                    }
+                });
+            });
         });
     </script>
 </body>
