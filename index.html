@@ -74,12 +74,12 @@
                     </span>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#nosotros"
+                        class="text-sm font-bold uppercase hover:text-primary transition-colors">Nosotros</a>
                     <a href="#servicios"
                         class="text-sm font-bold uppercase hover:text-primary transition-colors">Taller</a>
                     <a href="#vehiculos"
                         class="text-sm font-bold uppercase hover:text-primary transition-colors">Vehículos</a>
-                    <a href="#nosotros"
-                        class="text-sm font-bold uppercase hover:text-primary transition-colors">Nosotros</a>
                     <a href="#contacto"
                         class="text-sm font-bold uppercase hover:text-primary transition-colors">Contacto</a>
                     <a href="https://wa.me/34600000000?text=Hola,%20vengo%20de%20la%20web%20y%20necesito%20info"
@@ -95,6 +95,10 @@
     <!-- Navegación Fija Inferior (Móvil) -->
     <nav class="md:hidden fixed bottom-0 left-0 w-full bg-dark/95 backdrop-blur-lg border-t border-primary/20 z-50">
         <div class="flex justify-around items-center h-16 px-2">
+            <a href="#nosotros" class="flex flex-col items-center justify-center w-full text-gray-400 hover:text-primary transition-colors py-2">
+                <i class="fas fa-users text-xl mb-1"></i>
+                <span class="text-[10px] font-bold uppercase tracking-wider">Nosotros</span>
+            </a>
             <a href="#servicios" class="flex flex-col items-center justify-center w-full text-gray-400 hover:text-primary transition-colors py-2">
                 <i class="fas fa-tools text-xl mb-1"></i>
                 <span class="text-[10px] font-bold uppercase tracking-wider">Servicios</span>
@@ -102,10 +106,6 @@
             <a href="#vehiculos" class="flex flex-col items-center justify-center w-full text-gray-400 hover:text-primary transition-colors py-2">
                 <i class="fas fa-car text-xl mb-1"></i>
                 <span class="text-[10px] font-bold uppercase tracking-wider">Stock</span>
-            </a>
-            <a href="#nosotros" class="flex flex-col items-center justify-center w-full text-gray-400 hover:text-primary transition-colors py-2">
-                <i class="fas fa-users text-xl mb-1"></i>
-                <span class="text-[10px] font-bold uppercase tracking-wider">Nosotros</span>
             </a>
             <a href="#contacto" class="flex flex-col items-center justify-center w-full text-gray-400 hover:text-primary transition-colors py-2">
                 <i class="fas fa-envelope text-xl mb-1"></i>
@@ -126,6 +126,14 @@
                 fiabilidad en cada kilómetro.
             </p>
             <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+                <!-- Botón Nosotros -->
+                <a href="#nosotros"
+                    class="group inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-widest text-sm bg-dark/60 backdrop-blur-md border border-primary/40 rounded-full transition-all hover:bg-primary/20 hover:border-primary hover:shadow-[0_0_15px_rgba(255,193,7,0.2)] hover:-translate-y-1">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-users"></i> Nosotros
+                    </span>
+                </a>
+
                 <!-- Botón Nuestros Servicios -->
                 <a href="#servicios"
                     class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-black uppercase tracking-widest text-sm bg-primary rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,193,7,0.4)]">
@@ -133,14 +141,6 @@
                         <i class="fas fa-tools"></i> Nuestros Servicios
                     </span>
                     <div class="absolute inset-0 h-full w-full bg-white/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                </a>
-
-                <!-- Botón Nosotros -->
-                <a href="#nosotros"
-                    class="group inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-widest text-sm bg-dark/60 backdrop-blur-md border border-primary/40 rounded-full transition-all hover:bg-primary/20 hover:border-primary hover:shadow-[0_0_15px_rgba(255,193,7,0.2)] hover:-translate-y-1">
-                    <span class="flex items-center gap-2">
-                        <i class="fas fa-users"></i> Nosotros
-                    </span>
                 </a>
 
                 <!-- Botón Contáctanos -->
